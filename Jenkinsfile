@@ -4,7 +4,7 @@ node{
 
  try{
     stage('Clone Repo'){
-         git url: 'https://github.com/harshalulla/Demo.git'
+         url: 'https://github.com/harshalulla/Demo.git'
          credentialsId:'Harshalulla'
          git branch: 'origin/master'
     }
