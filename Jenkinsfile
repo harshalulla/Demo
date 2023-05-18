@@ -5,7 +5,7 @@ node{
  try{
     stage('Clone Repo'){
          git url: 'https://github.com/harshalulla/Demo.git'
-         credentialsId:'Harsha-id'
+         credentialsId:'Harshalulla'
          branch: 'main'
     }
     stage('Build Docker'){
