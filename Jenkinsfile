@@ -4,9 +4,11 @@ node{
 
  try{
     stage('Clone Repo'){
-         url: 'https://github.com/harshalulla/Demo.git'
-         credentialsId:'Harshalulla'
+
          git branch: 'origin/master'
+         credentialsId: 'Harsha-id'
+         url: 'https://github.com/harshalulla/Demo.git'
+         echo "Clone Success"
     }
     stage('Build Docker'){
          dockerImage = docker.build("demo:${env.BUILD_NUMBER}")
