@@ -6,7 +6,7 @@ node{
     stage('Clone Repo'){
          git url: 'https://github.com/harshalulla/Demo.git'
          credentialsId:'Harshalulla'
-         git branch: 'master'
+         git branch: 'origin/master'
     }
     stage('Build Docker'){
          dockerImage = docker.build("demo:${env.BUILD_NUMBER}")
